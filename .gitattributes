@@ -1,0 +1,21 @@
+# Line Endings
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Sources
+*.cs        text diff=csharp
+
+# Project Files
+*.sln       text
+*.csproj    text
+
+# Compiled Dynamic libraries
+*.so        binary
+*.dylib     binary
+*.dll       binary
+
+# Executables
+*.exe       binary
+*.out       binary
+*.app       binary

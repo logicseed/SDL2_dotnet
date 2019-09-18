@@ -25,6 +25,11 @@ namespace _01_OpenWindow
                 WINDOW_HEIGHT,
                 WindowOptions.Shown);
 
+            Console.WriteLine("Fill the surface orange...");
+            var color = new Color(255, 152, 0);
+            window.Surface.FillRect(color);
+            window.UpdateWindowSurface();
+
             Console.WriteLine("Waiting for 5 seconds...");
 
             Thread.Sleep(5000);

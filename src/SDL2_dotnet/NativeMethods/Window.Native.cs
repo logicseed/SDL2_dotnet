@@ -32,5 +32,32 @@ namespace SDL2_dotnet
             EntryPoint = "SDL_DestroyWindow"
         )]
         private static extern void SDL_DestroyWindow(IntPtr windowPointer);
+
+        [DllImport(
+            NATIVE_CONSTANTS.LIBRARY_PATH_SDL2,
+            CallingConvention = NATIVE_CONSTANTS.CALLING_CONVENTION,
+            CharSet = NATIVE_CONSTANTS.CHAR_SET,
+            SetLastError = NATIVE_CONSTANTS.SET_LAST_ERROR,
+            EntryPoint = "SDL_GetWindowSurface"
+        )]
+        private static extern IntPtr SDL_GetWindowSurface(IntPtr windowPointer);
+
+        [DllImport(
+            NATIVE_CONSTANTS.LIBRARY_PATH_SDL2,
+            CallingConvention = NATIVE_CONSTANTS.CALLING_CONVENTION,
+            CharSet = NATIVE_CONSTANTS.CHAR_SET,
+            SetLastError = NATIVE_CONSTANTS.SET_LAST_ERROR,
+            EntryPoint = "SDL_GetWindowSurface"
+        )]
+        private static extern SDL_Surface SDL_GetWindowSurfaceStruct(IntPtr windowPointer);
+
+        [DllImport(
+            NATIVE_CONSTANTS.LIBRARY_PATH_SDL2,
+            CallingConvention = NATIVE_CONSTANTS.CALLING_CONVENTION,
+            CharSet = NATIVE_CONSTANTS.CHAR_SET,
+            SetLastError = NATIVE_CONSTANTS.SET_LAST_ERROR,
+            EntryPoint = "SDL_UpdateWindowSurface"
+        )]
+        private static extern int SDL_UpdateWindowSurface(IntPtr windowPointer);
     }
 }

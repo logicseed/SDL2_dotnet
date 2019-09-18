@@ -1,5 +1,8 @@
 ﻿// SPDX-License-Identifier: MIT
 
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("UnitTests")]
 namespace SDL2_dotnet
 {
     /// <summary>
@@ -12,7 +15,7 @@ namespace SDL2_dotnet
         /// <summary>
         /// Clears any previous error message.
         /// </summary>
-        protected void ClearError()
+        internal void ClearError()
         {
             SDL_ClearError();
         }
@@ -27,7 +30,7 @@ namespace SDL2_dotnet
         /// It's possible for multiple errors to occur before calling <see cref="GetError"/>(). Only the last error
         /// is returned.
         /// </remarks>
-        protected string GetError()
+        internal string GetError()
         {
             return SDL_GetError();
         }
@@ -41,7 +44,7 @@ namespace SDL2_dotnet
         /// <remarks>
         /// Calling <see cref="SetError"/>() will replace any previous error message that was set.
         /// </remarks>
-        protected void SetError(string message)
+        internal void SetError(string message)
         {
             SDL_SetError(message);
         }

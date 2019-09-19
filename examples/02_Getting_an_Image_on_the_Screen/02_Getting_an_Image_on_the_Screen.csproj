@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>_01_Hellow_SDL</RootNamespace>
+    <RootNamespace>_02_Getting_an_Image_on_the_Screen</RootNamespace>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
@@ -13,6 +13,9 @@
 
   <ItemGroup>
     <Content Include="..\..\ext\win32_x64\SDL2-2.0.10\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Hello_World.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

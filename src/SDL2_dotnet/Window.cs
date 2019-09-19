@@ -4,7 +4,7 @@ using System;
 
 namespace SDL2_dotnet
 {
-    public partial class Window : ErrorAccess
+    public partial class Window
     {
         private readonly IntPtr _windowPointer;
 
@@ -16,7 +16,7 @@ namespace SDL2_dotnet
 
             if (_windowPointer == null)
             {
-                string message = $"Window could not be created! SDL_Error: {GetError()}";
+                string message = $"Window could not be created! SDL_Error: {SDL2.GetError()}";
                 throw new InitializationException(message);
             }
 

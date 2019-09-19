@@ -14,7 +14,7 @@ namespace _01_Hellow_SDL_Rainbow
 
             // Creating a window
             using Window window = new Window(
-                "SDL2_dotnet Rainbow Test Window",
+                "SDL2_dotnet Example",
                 WindowPosition.Centered,
                 ScreenResolution.HD,
                 WindowOptions.Shown);

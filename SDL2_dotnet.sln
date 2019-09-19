@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PULL_REQUEST_TEMPLATE", "PU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Hello_SDL_Rainbow", "examples\01_Hello_SDL_Rainbow\01_Hello_SDL_Rainbow.csproj", "{83C1F7AD-D835-4586-9023-5BC3A0DA3777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Getting_an_Image_on_the_Screen", "examples\02_Getting_an_Image_on_the_Screen\02_Getting_an_Image_on_the_Screen.csproj", "{4FFC61E4-225E-421F-8697-3547F26A8D21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{83C1F7AD-D835-4586-9023-5BC3A0DA3777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C1F7AD-D835-4586-9023-5BC3A0DA3777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C1F7AD-D835-4586-9023-5BC3A0DA3777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFC61E4-225E-421F-8697-3547F26A8D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFC61E4-225E-421F-8697-3547F26A8D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFC61E4-225E-421F-8697-3547F26A8D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFC61E4-225E-421F-8697-3547F26A8D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{1DB38946-ABA3-439B-A342-14EC1BA2613D} = {38E46E50-E55A-46EC-A8F9-07281790FF5D}
 		{C499C87E-A91E-4A8E-95A6-8F90D942E055} = {38E46E50-E55A-46EC-A8F9-07281790FF5D}
 		{83C1F7AD-D835-4586-9023-5BC3A0DA3777} = {CB4A019E-2CCD-4867-A947-3EBD3739630E}
+		{4FFC61E4-225E-421F-8697-3547F26A8D21} = {CB4A019E-2CCD-4867-A947-3EBD3739630E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B187C854-3F48-458F-A963-7B3BA11229B7}

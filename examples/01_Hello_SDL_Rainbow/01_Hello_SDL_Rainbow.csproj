@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Content Include="..\..\ext\win32_x64\SDL2-2.0.10\SDL2.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

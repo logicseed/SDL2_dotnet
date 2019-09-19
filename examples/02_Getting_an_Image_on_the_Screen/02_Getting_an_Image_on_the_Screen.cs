@@ -1,31 +1,25 @@
 ﻿using SDL2_dotnet;
 
-namespace _01_Hellow_SDL
+namespace _02_Getting_an_Image_on_the_Screen
 {
     internal class Program
     {
-        private const int WINDOW_WIDTH = 640;
-        private const int WINDOW_HEIGHT = 480;
-
         private static void Main(string[] args)
         {
-            // Initializing SDL2
             using SDL2 sdl2 = new SDL2(Subsystems.Video);
 
-            // Creating a window
             using Window window = new Window(
                 "SDL2_dotnet Example",
                 WindowPosition.Undefined,
-                WindowPosition.Undefined,
-                WINDOW_WIDTH,
-                WINDOW_HEIGHT,
+                ScreenResolution.VGA,
                 WindowOptions.Shown);
 
-            // Filling window surface with white
+            using Surface imageSurface = Surface.LoadBMP("Hello_World.bmp");
+
             window.Surface.Fill(Color.White);
+            window.Surface.BlitSurface(imageSurface);
             window.Update();
 
-            // Waiting 2 seconds
             Timer.Delay(2000);
         }
     }

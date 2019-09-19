@@ -13,15 +13,15 @@ namespace SDL2_dotnet
 
         public bool Equals(Color other)
         {
-            return Red == other.Red &&
-                   Green == other.Green &&
-                   Blue == other.Blue &&
-                   Alpha == other.Alpha;
+            return R == other.R &&
+                   G == other.G &&
+                   B == other.B &&
+                   A == other.A;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Red, Green, Blue, Alpha);
+            return HashCode.Combine(R, G, B, A);
         }
 
         public static bool operator ==(Color left, Color right)

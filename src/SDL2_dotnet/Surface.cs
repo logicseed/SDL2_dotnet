@@ -16,12 +16,12 @@ namespace SDL2_dotnet
             _surface = Marshal.PtrToStructure<SDL_Surface>(_surfacePointer);
         }
 
-        public void FillRect(Color color)
+        public void Fill(Color color)
         {
             SDL_FillRect(_surfacePointer, IntPtr.Zero, color.MapRGB(_surface.PixelFormat));
         }
 
-        public void FillRect(Rect rect, Color color)
+        public void Fill(Rect rect, Color color)
         {
             SDL_FillRect(_surfacePointer, ref rect, color.MapRGB(_surface.PixelFormat));
         }

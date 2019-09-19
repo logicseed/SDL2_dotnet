@@ -1,0 +1,28 @@
+{
+  "id": "86e78752-23be-4a7a-8f80-c963cc694d22",
+  "name": "SDL2_dotnet Visual Studio extensions",
+  "description": "A collection of required Visual Studio extensions for the SDL2_dotnet project.",
+  "version": "1.0",
+  "extensions": [
+    {
+      "name": "Code Cleanup On Save",
+      "vsixId": "66985471-b701-4851-a2d7-5a8bdce1e694"
+    },
+    {
+      "name": "File Nesting",
+      "vsixId": "6c799bc4-0d4c-4172-98bc-5d464b612dca"
+    },
+    {
+      "name": "Markdown Editor",
+      "vsixId": "9ca64947-e9ca-4543-bfb8-6cce9be19fd6"
+    },
+    {
+      "name": "Microsoft Code Analysis 2019",
+      "vsixId": "16454f43-db71-416c-a4f6-b168864a5abf"
+    },
+    {
+      "name": "Trailing Whitespace Visualizer",
+      "vsixId": "4c1a78e6-e7b8-4aa9-8812-4836e051ff6d"
+    }
+  ]
+}

@@ -15,6 +15,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{CB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Hello_SDL", "examples\01_Hello_SDL\01_Hello_SDL.csproj", "{6F724054-C516-40B1-BD3D-16D33FA309FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Project Files", "_Project Files", "{68C03804-3DBD-4B18-891E-3B766499A0FF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{38E46E50-E55A-46EC-A8F9-07281790FF5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{1DB38946-ABA3-439B-A342-14EC1BA2613D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug_report.md = .github\ISSUE_TEMPLATE\bug_report.md
+		.github\ISSUE_TEMPLATE\feature_request.md = .github\ISSUE_TEMPLATE\feature_request.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PULL_REQUEST_TEMPLATE", "PULL_REQUEST_TEMPLATE", "{C499C87E-A91E-4A8E-95A6-8F90D942E055}"
+	ProjectSection(SolutionItems) = preProject
+		.github\PULL_REQUEST_TEMPLATE\pull_request_template.md = .github\PULL_REQUEST_TEMPLATE\pull_request_template.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +68,9 @@ Global
 		{9B98FCD8-272B-4720-B603-9F8B187F02AE} = {3E885FAC-C46B-4615-A565-69C15840C104}
 		{82C6D6BC-911E-43A3-924C-EE8A80D2A976} = {3E885FAC-C46B-4615-A565-69C15840C104}
 		{6F724054-C516-40B1-BD3D-16D33FA309FD} = {CB4A019E-2CCD-4867-A947-3EBD3739630E}
+		{38E46E50-E55A-46EC-A8F9-07281790FF5D} = {68C03804-3DBD-4B18-891E-3B766499A0FF}
+		{1DB38946-ABA3-439B-A342-14EC1BA2613D} = {38E46E50-E55A-46EC-A8F9-07281790FF5D}
+		{C499C87E-A91E-4A8E-95A6-8F90D942E055} = {38E46E50-E55A-46EC-A8F9-07281790FF5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B187C854-3F48-458F-A963-7B3BA11229B7}

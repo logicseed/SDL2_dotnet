@@ -1,6 +1,4 @@
 ﻿using SDL2_dotnet;
-using System;
-using System.Threading;
 
 namespace _01_OpenWindow
 {
@@ -11,12 +9,10 @@ namespace _01_OpenWindow
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Initializing SDL2...");
-
+            // Initializing SDL2
             using var sdl2 = new SDL2(Subsystems.Video);
 
-            Console.WriteLine("Creating window...");
-
+            // Creating a window
             using var window = new Window(
                 "SDL2_dotnet Test Window",
                 WindowPosition.Centered,
@@ -25,14 +21,13 @@ namespace _01_OpenWindow
                 WINDOW_HEIGHT,
                 WindowOptions.Shown);
 
-            Console.WriteLine("Fill the surface orange...");
+            // Filling window surface with orange
             var color = new Color(255, 152, 0);
             window.Surface.FillRect(color);
             window.UpdateWindowSurface();
 
-            Console.WriteLine("Waiting for 5 seconds...");
-
-            Thread.Sleep(5000);
+            // Waiting 2 seconds
+            Timer.Delay(2000);
         }
     }
 }

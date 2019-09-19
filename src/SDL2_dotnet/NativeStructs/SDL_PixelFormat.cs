@@ -26,6 +26,6 @@ namespace SDL2_dotnet
         public byte BShift;
         public byte AShift;
         public int RefCount;
-        public IntPtr Next;
+        public IntPtr Next; // SDL_PixelFormat*
     }
 }

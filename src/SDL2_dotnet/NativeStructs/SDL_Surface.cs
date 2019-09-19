@@ -9,7 +9,7 @@ namespace SDL2_dotnet
     internal struct SDL_Surface
     {
         public uint Flags;
-        public IntPtr PixelFormat; // SDL_PixelFormat
+        public IntPtr PixelFormat; // SDL_PixelFormat*
         public int Width;
         public int Height;
         public int Pitch;

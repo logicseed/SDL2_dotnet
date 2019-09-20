@@ -4,99 +4,87 @@ namespace SDL2_dotnet
 {
     public enum EventType : uint
     {
-        SDL_FIRSTEVENT = 0b_0000_0000_0000_0000_0000_0000_0000_0000,
+        // Application Events
+        Quit = 0b_0000_0000_0000_0000_0000_0001_0000_0000,
 
-        /* Application events */
-        SDL_QUIT = 0b_0000_0000_0000_0000_0000_0001_0000_0000, //0x100,
+        // Mobile Events
+        ApplicationTerminating = 0b_0000_0000_0000_0000_0000_0001_0000_0001,
+        ApplicationLowMemory = 0b_0000_0000_0000_0000_0000_0001_0000_0010,
+        ApplicationWillEnterBackground = 0b_0000_0000_0000_0000_0000_0001_0000_0011,
+        ApplicationDidEnterBackground = 0b_0000_0000_0000_0000_0000_0001_0000_0100,
+        ApplicationWillEnterForeground = 0b_0000_0000_0000_0000_0000_0001_0000_0101,
+        ApplicationDidEnterForeground = 0b_0000_0000_0000_0000_0000_0001_0000_0110,
 
-        /* iOS/Android/WinRT app events */
-        SDL_APP_TERMINATING = 0b_0000_0000_0000_0000_0000_0001_0000_0001, //,
-        SDL_APP_LOWMEMORY = 0b_0000_0000_0000_0000_0000_0001_0000_0010,
-        SDL_APP_WILLENTERBACKGROUND = 0b_0000_0000_0000_0000_0000_0001_0000_0011,
-        SDL_APP_DIDENTERBACKGROUND = 0b_0000_0000_0000_0000_0000_0001_0000_0100,
-        SDL_APP_WILLENTERFOREGROUND = 0b_0000_0000_0000_0000_0000_0001_0000_0101,
-        SDL_APP_DIDENTERFOREGROUND = 0b_0000_0000_0000_0000_0000_0001_0000_0110,
+        // Display Events
+        Display = 0b_0000_0000_0000_0000_0000_0001_0101_0000,
 
-        /* Display events */
-        /* Only available in SDL 2.0.9 or higher */
-        SDL_DISPLAYEVENT = 0b_0000_0000_0000_0000_0000_0001_0101_0000,
+        // Window Events
+        Window = 0b_0000_0000_0000_0000_0000_0010_0000_0000,
+        SystemWindowManager = 0b_0000_0000_0000_0000_0000_0010_0000_0001,
 
-        /* Window events */
-        SDL_WINDOWEVENT = 0b_0000_0000_0000_0000_0000_0010_0000_0000,
-        SDL_SYSWMEVENT = 0b_0000_0000_0000_0000_0000_0010_0000_0001,
+        // Keyboard Events
+        KeyDown = 0b_0000_0000_0000_0000_0000_0011_0000_0000,
+        KeyUp = 0b_0000_0000_0000_0000_0000_0011_0000_0001,
+        TextEditing = 0b_0000_0000_0000_0000_0000_0011_0000_0010,
+        TextInput = 0b_0000_0000_0000_0000_0000_0011_0000_0011,
+        KeyMapChanged = 0b_0000_0000_0000_0000_0000_0011_0000_0100,
 
-        /* Keyboard events */
-        SDL_KEYDOWN = 0x300,
-        SDL_KEYUP,
-        SDL_TEXTEDITING,
-        SDL_TEXTINPUT,
-        SDL_KEYMAPCHANGED,
+        // Mouse Events
+        MouseMotion = 0b_0000_0000_0000_0000_0000_0100_0000_0000,
+        MouseButtonDown = 0b_0000_0000_0000_0000_0000_0100_0000_0001,
+        MouseButtonUp = 0b_0000_0000_0000_0000_0000_0100_0000_0010,
+        MouseWheel = 0b_0000_0000_0000_0000_0000_0100_0000_0011,
 
-        /* Mouse events */
-        SDL_MOUSEMOTION = 0x400,
-        SDL_MOUSEBUTTONDOWN,
-        SDL_MOUSEBUTTONUP,
-        SDL_MOUSEWHEEL,
+        // Joystick Events
+        JoystickAxisMotion = 0b_0000_0000_0000_0000_0000_0110_0000_0000,
+        JoystickBallMotion = 0b_0000_0000_0000_0000_0000_0110_0000_0001,
+        JoystickHatMotion = 0b_0000_0000_0000_0000_0000_0110_0000_0010,
+        JoystickButtonDown = 0b_0000_0000_0000_0000_0000_0110_0000_0011,
+        JoystickButtonUp = 0b_0000_0000_0000_0000_0000_0110_0000_0100,
+        JoystickDeviceAdded = 0b_0000_0000_0000_0000_0000_0110_0000_0101,
+        JoystickDeviceRemoved = 0b_0000_0000_0000_0000_0000_0110_0000_0110,
 
-        /* Joystick events */
-        SDL_JOYAXISMOTION = 0x600,
-        SDL_JOYBALLMOTION,
-        SDL_JOYHATMOTION,
-        SDL_JOYBUTTONDOWN,
-        SDL_JOYBUTTONUP,
-        SDL_JOYDEVICEADDED,
-        SDL_JOYDEVICEREMOVED,
+        // Game Controller Events
+        ControllerAxisMotion = 0b_0000_0000_0000_0000_0000_0110_0101_0000,
+        ControllerButtonDown = 0b_0000_0000_0000_0000_0000_0110_0101_0001,
+        ControllerButtonUp = 0b_0000_0000_0000_0000_0000_0110_0101_0010,
+        ControllerDeviceAdded = 0b_0000_0000_0000_0000_0000_0110_0101_0011,
+        ControllerDeviceRemoved = 0b_0000_0000_0000_0000_0000_0110_0101_0100,
+        ControllerDeviceRemapped = 0b_0000_0000_0000_0000_0000_0110_0101_0101,
 
-        /* Game controller events */
-        SDL_CONTROLLERAXISMOTION = 0x650,
-        SDL_CONTROLLERBUTTONDOWN,
-        SDL_CONTROLLERBUTTONUP,
-        SDL_CONTROLLERDEVICEADDED,
-        SDL_CONTROLLERDEVICEREMOVED,
-        SDL_CONTROLLERDEVICEREMAPPED,
+        // Touch Events
+        FingerDown = 0b_0000_0000_0000_0000_0000_0111_0000_0000,
+        FingerUp = 0b_0000_0000_0000_0000_0000_0111_0000_0001,
+        FingerMotion = 0b_0000_0000_0000_0000_0000_0111_0000_0010,
 
-        /* Touch events */
-        SDL_FINGERDOWN = 0x700,
-        SDL_FINGERUP,
-        SDL_FINGERMOTION,
+        // Gesture Events
+        DollarGesture = 0b_0000_0000_0000_0000_0000_1000_0000_0000,
+        DollarRecord = 0b_0000_0000_0000_0000_0000_1000_0000_0001,
+        MultiGesture = 0b_0000_0000_0000_0000_0000_1000_0000_0010,
 
-        /* Gesture events */
-        SDL_DOLLARGESTURE = 0x800,
-        SDL_DOLLARRECORD,
-        SDL_MULTIGESTURE,
+        // Clipboard Events
+        ClipboardUpdate = 0b_0000_0000_0000_0000_0000_1001_0000_0000,
 
-        /* Clipboard events */
-        SDL_CLIPBOARDUPDATE = 0x900,
+        // Drag and Drop Events
+        DropFile = 0b_0000_0000_0000_0000_0001_0000_0000_0000,
+        DropText = 0b_0000_0000_0000_0000_0001_0000_0000_0001,
+        DropBegin = 0b_0000_0000_0000_0000_0001_0000_0000_0010,
+        DropComplete = 0b_0000_0000_0000_0000_0001_0000_0000_0011,
 
-        /* Drag and drop events */
-        SDL_DROPFILE = 0x1000,
-        /* Only available in 2.0.4 or higher */
-        SDL_DROPTEXT,
-        SDL_DROPBEGIN,
-        SDL_DROPCOMPLETE,
+        // Audio Events
+        AudioDeviceAdded = 0b_0000_0000_0000_0000_0001_0001_0000_0000,
+        AudioDeviceRemoved = 0b_0000_0000_0000_0000_0001_0001_0000_0001,
 
-        /* Audio hotplug events */
-        /* Only available in SDL 2.0.4 or higher */
-        SDL_AUDIODEVICEADDED = 0x1100,
-        SDL_AUDIODEVICEREMOVED,
+        // Sensor Events
+        SensorUpdate = 0b_0000_0000_0000_0000_0001_0010_0000_0000,
 
-        /* Sensor events */
-        /* Only available in SDL 2.0.9 or higher */
-        SDL_SENSORUPDATE = 0x1200,
+        // Render Events
+        RenderTargetsRest = 0b_0000_0000_0000_0000_0010_0000_0000_0000,
+        RenderDeviceReset = 0b_0000_0000_0000_0000_0010_0000_0000_0001,
 
-        /* Render events */
-        /* Only available in SDL 2.0.2 or higher */
-        SDL_RENDER_TARGETS_RESET = 0x2000,
-        /* Only available in SDL 2.0.4 or higher */
-        SDL_RENDER_DEVICE_RESET,
-
-        /* Events SDL_USEREVENT through SDL_LASTEVENT are for
-         * your use, and should be allocated with
-         * SDL_RegisterEvents()
-         */
-        SDL_USEREVENT = 0x8000,
-
-        /* The last event, used for bouding arrays. */
-        SDL_LASTEVENT = 0xFFFF
+        // User Events
+        // Events UserEvent through LastEvent are for users, allocate with SDL_RegisterEvents()
+        UserEvent = 0b_0000_0000_0000_0000_1000_0000_0000_0000,
+        LastEvent = 0b_0000_0000_0000_0000_1111_1111_1111_1111
     }
 }

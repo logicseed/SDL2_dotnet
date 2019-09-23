@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     public partial class SDL2
     {

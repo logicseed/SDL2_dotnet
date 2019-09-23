@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct SDL_Surface

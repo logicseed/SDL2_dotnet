@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     public enum ScreenResolution
     {

@@ -1,4 +1,4 @@
-﻿using SDL2_dotnet;
+﻿using SDL;
 
 namespace _02_Getting_an_Image_on_the_Screen
 {
@@ -6,7 +6,7 @@ namespace _02_Getting_an_Image_on_the_Screen
     {
         private static void Main(string[] args)
         {
-            using SDL2 sdl2 = new SDL2(Subsystems.Video);
+            using SDL.SDL2 sdl2 = new SDL.SDL2(Subsystems.Video);
 
             using Window window = new Window(
                 "SDL2_dotnet Example",

@@ -1,6 +1,6 @@
 ﻿// SPDX-License-Identifier: MIT
 
-namespace SDL2_dotnet
+namespace SDL
 {
     /// <summary>
     /// A structure that contains the definition of a rectangle, with the origin at the upper left.

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     /// <summary>
     /// An enumeration of subsystems.

@@ -1,4 +1,4 @@
-﻿using SDL2_dotnet;
+﻿using SDL;
 
 namespace _01_Hellow_SDL
 {
@@ -10,7 +10,7 @@ namespace _01_Hellow_SDL
         private static void Main(string[] args)
         {
             // Initializing SDL2
-            using SDL2 sdl2 = new SDL2(Subsystems.Video);
+            using SDL.SDL2 sdl2 = new SDL.SDL2(Subsystems.Video);
 
             // Creating a window
             using Window window = new Window(

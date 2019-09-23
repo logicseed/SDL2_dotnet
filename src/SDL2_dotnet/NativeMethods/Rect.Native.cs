@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     [StructLayout(LayoutKind.Sequential)]
     public partial struct Rect

@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SDL2_dotnet
+namespace SDL
 {
     [StructLayout(LayoutKind.Sequential, Pack = 4)]
     public partial struct Color

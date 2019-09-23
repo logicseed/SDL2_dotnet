@@ -1,6 +1,6 @@
 ﻿// SPDX-License-Identifier: MIT
 
-namespace SDL2_dotnet
+namespace SDL
 {
     /// <summary>
     /// System-based window positions.
